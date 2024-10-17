@@ -13,7 +13,7 @@
 
 <body>
     <p>Masukkan nilai diameter untuk menghitung volume bola</p>
-    <form action="" method="post" id="form">
+    <form method="get" id="form">
         <label for="diameter">Diameter</label>
         <input type="text" name="diameter" id="diameter" required>
         
@@ -28,6 +28,22 @@
         // berdasarkan nilai diameter yang dimasukkan.
         // Nilai volume akan muncul pada isian Volume setelah tombol
         // hitung ditekan.
+
+        // let D=document.forms['form'].diameter.value;
+        // let V=document.forms['form'].volume.value;
+        // let r=D/2;
+        // var Vserc=(4/3)*3.14*r*r*r;
+        // if(D=="2"){alert(Vserc);}
+        // var V_v=document.getElementById('value');
+        // V_v.value=Vserc;
+
+       document.getElementById('submit').addEventListener('click',function(){
+        let D=document.getElementById('diameter').value;
+        let r=D/2;
+        let Vserc=(4/3)*3.14*r*r*r;
+        document.getElementById('volume').value=Vserc;
+       })
+
     </script>
 </body>
 

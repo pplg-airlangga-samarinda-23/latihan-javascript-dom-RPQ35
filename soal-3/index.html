@@ -7,7 +7,7 @@
 
 <body>
     <form id="form1" onsubmit="showAlertName()">
-        Nama depan: <input type="text" name="depan" value="Messi"><br>
+        Nama depan: <input type="text" name="depan" value="Messi" id="namd"><br>
         Nama belakang: <input type="text" name="belakang" value="Ronaldo"><br>
         <input type="submit" value="Submit">
     </form>
@@ -17,6 +17,8 @@
             // lengkapi fungsi ini untuk dapat menampilkan alert yang berisikan
             // nama depan dan nama belakang sesuai dengan yang diinputkan
             // pada input
+           alert(document.forms["form1"].depan.value+" "+document.forms["form1"].belakang.value);
+        
         }
     </script>
 </body>
